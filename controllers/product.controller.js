@@ -1,5 +1,7 @@
 const Product = require('../models/products.model')
 
+
+//ajout
 exports.addProduct = (req, res) => {
     const newProduct = {
         libelle : req.body.libelle,
@@ -16,3 +18,38 @@ exports.addProduct = (req, res) => {
             res.status(500).json({message : err.message})
         })
 }
+
+exports.detProduct =  (req, res) => {
+     Product.find()
+        .then((data) => {
+            console.log('success');  
+            res.status(200).json({
+                message : 'produit créé avec success',
+                product : data
+            })
+            
+        })
+        .catch(err => {
+            res.status(500).json({message : err.message})
+     })
+}
+
+exports.deleteProduct = async (req, res) => {
+    try {
+        await Product.findByIdAndDelete(req.params.id)
+
+        if (!data) {
+            return res.status(404).json({
+                message: 'Produit non trouvé'
+        })}
+        console.log('success');
+        res.status(200).json({
+            message: 'Produit supprimé avec succès',
+            product: data
+        })
+
+    } catch (err) {
+        res.status(500).json({message : 'erreur de suppression'})
+    }
+}
+
