@@ -19,12 +19,12 @@ exports.addProduct = (req, res) => {
         })
 }
 
-exports.detProduct =  (req, res) => {
+exports.getProduct =  (req, res) => {
      Product.find()
         .then((data) => {
-            console.log('success');  
+            console.log('fetch reussi');  
             res.status(200).json({
-                message : 'produit créé avec success',
+                message : 'fetch des produits reussi',
                 product : data
             })
             
