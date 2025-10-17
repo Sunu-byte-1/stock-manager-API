@@ -1,0 +1,23 @@
+{
+  "name": "stock-manager-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sunu-byte-1/stock-manager-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sunu-byte-1/stock-manager-API/issues"
+  },
+  "homepage": "https://github.com/Sunu-byte-1/stock-manager-API#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.19.1"
+  }
+}
