@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const productSchema = mongoose.Schema({
     libelle : {
-        String,
+        type: String,
         required: [true, 'champ obligatoire']
     },
     description : {
